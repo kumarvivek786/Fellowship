@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "reversenumber", "reversenumber\reversenumber.vbproj", "{FF3A3FA1-81CE-48BC-BE7D-54FE0540778D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reverseno", "reverseno\reverseno.csproj", "{19CD96D7-A3C3-44F1-9B81-5B64AB3B1D27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF3A3FA1-81CE-48BC-BE7D-54FE0540778D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF3A3FA1-81CE-48BC-BE7D-54FE0540778D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF3A3FA1-81CE-48BC-BE7D-54FE0540778D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF3A3FA1-81CE-48BC-BE7D-54FE0540778D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19CD96D7-A3C3-44F1-9B81-5B64AB3B1D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19CD96D7-A3C3-44F1-9B81-5B64AB3B1D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19CD96D7-A3C3-44F1-9B81-5B64AB3B1D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19CD96D7-A3C3-44F1-9B81-5B64AB3B1D27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8F225A6C-2B48-417F-B364-3D2F02430399}
+		SolutionGuid = {9D51A907-C446-481D-92E9-1725FAA93E38}
 	EndGlobalSection
 EndGlobal
