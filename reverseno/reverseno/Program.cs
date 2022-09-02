@@ -11,9 +11,13 @@ namespace reverseno
         static void Main(string[] args)
         {
 
-            int num = 1234;
+            int num;
             int result = 0;
             int reminder;
+
+            Console.WriteLine("enter no.");
+                num = Convert.ToInt32(Console.ReadLine());
+                 
 
             while (num != 0)
             {
