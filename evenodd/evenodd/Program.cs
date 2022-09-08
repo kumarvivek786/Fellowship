@@ -16,7 +16,7 @@ namespace evenodd
             num = Convert.ToInt32(Console.ReadLine());
             if (num%2==0)
             {
-                Console.WriteLine("Prime Number");
+                Console.WriteLine("Even Number");
             }
             
             else
