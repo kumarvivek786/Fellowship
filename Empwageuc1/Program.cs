@@ -10,7 +10,7 @@ namespace Empwageuc1
     {
         static void Main(string[] args)
         {
-
+            //UC-1
             int empPresent = 1;
             Random random = new Random();
             int empCheck = random.Next(0, 2);
