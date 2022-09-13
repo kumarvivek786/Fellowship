@@ -10,17 +10,33 @@ namespace Empwageuc1
     {
         static void Main(string[] args)
         {
-            //UC-1
-            int empPresent = 1;
+            //UC-2
+            int EMP_PRESENT = 1;
+            int EMP_RATE_PER_HR = 20;
+            int empHrs = 0,empWage = 0;
             Random random = new Random();
             int empCheck = random.Next(0, 2);
             
             Console.WriteLine("Random value:" + empCheck);
 
-            if(empPresent == empCheck)
+            if(EMP_PRESENT == empCheck)
+            {
+                empHrs = 8;
+
                 Console.WriteLine("Employee is Present");
+
+            }
+             
+               
             else
+            {
+
+                empHrs = 0;
                 Console.WriteLine("Employee is Absent");
+            }
+                empWage = empHrs * EMP_RATE_PER_HR; ;
+            Console.WriteLine("Employee Wage Per Day:" + empWage);
+
                 Console.ReadLine();
         }
     }
