@@ -10,22 +10,21 @@ namespace Empwageuc1
     {
         static void Main(string[] args)
         {
-            CalculateEmpWage();
+            CalculateEmpWage("Delloite",20,70,40);
+            CalculateEmpWage("Microsoft",18, 60,90);
+            CalculateEmpWage("Infosys",15,55,100);
             Console.ReadLine();
         }
         
-        public static void CalculateEmpWage()
+        public static void CalculateEmpWage(string company,int maxWorkingDays, int maxWorkingHrs, int empRatePerHr)
         {
             //UC-7 
             const int FULL_TIME = 1;
             const int PART_TIME = 2;
-            const int EMP_RATE_PER_HR = 20;
-            const int MAX_WORKING_DAYS = 20;
-            const int MAX_WORKING_HRS = 100;
             int empHrs = 0, empWage = 0, totalEmpwage = 0, day = 1, totalHrs = 0;
             Random random = new Random();
 
-            while (day<= MAX_WORKING_DAYS && totalHrs<= MAX_WORKING_HRS)
+            while (day<= maxWorkingDays && totalHrs<= maxWorkingHrs)
             {
 
                 int empCheck = random.Next(0, 3);
@@ -47,16 +46,16 @@ namespace Empwageuc1
 
                 }
 
-                empWage = empHrs * EMP_RATE_PER_HR; ;
+                empWage = empHrs * empRatePerHr; ;
                 totalHrs += empHrs;
-                Console.WriteLine("Employee Wage on Day{0} and Hrs {1} is {2}", day, totalHrs, empWage);
+               // Console.WriteLine("Employee Wage on Day{0} and Hrs {1} is {2}", day, totalHrs, empWage);
                 //totalEmpwage = totalEmpwage + empWage;
                 totalEmpwage += empWage;
                 day++;
                 
 
             }
-            Console.WriteLine("\nTotal Empwage is;" + totalEmpwage);
+            Console.WriteLine("\nTotal Empwage of {0} is {1}",company,totalEmpwage);
         }
     }
 }
