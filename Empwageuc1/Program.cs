@@ -19,7 +19,7 @@ namespace Empwageuc1
             int empHrs = 0, empWage = 0, totalEmpwage = 0, day = 1,totalHrs=0; 
             Random random = new Random();
 
-            while(day<MAX_WORKING_DAYS && totalHrs<=MAX_WORKING_HRS)
+            while(day<=MAX_WORKING_DAYS && totalHrs<=MAX_WORKING_HRS)
             {
 
                 int empCheck = random.Next(0, 3);
@@ -43,11 +43,11 @@ namespace Empwageuc1
 
                 empWage = empHrs * EMP_RATE_PER_HR; ;
                 totalHrs+=empHrs;
-                Console.WriteLine("Employee Wage on Day{0} and Hrs{1} is {2}",day,empHrs,empWage);
+                Console.WriteLine("Employee Wage on Day{0} and Hrs{1} is {2}",day,totalHrs,empWage);
                 //totalEmpwage = totalEmpwage + empWage;
                 totalEmpwage+=empWage;
                 day++;
-                totalHrs+= empHrs;
+                
                  
             }
             Console.WriteLine("\nTotal Empwage is;" + totalEmpwage);
