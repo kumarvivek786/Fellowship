@@ -6,19 +6,22 @@ using System.Threading.Tasks;
 
 namespace Empwageuc1
 {
-    internal class Program
+        public class Program
     {
-        static void Main(string[] args)
-        {
-            CalculateEmpWage("Delloite",20,70,40);
-            CalculateEmpWage("Microsoft",18, 60,90);
-            CalculateEmpWage("Infosys",15,55,100);
-            Console.ReadLine();
+        public string company;
+        public int maxWorkingDays, maxWorkingHrs, empRatePerHr;
+
+        public Program(string comp, int maxWorkingDays, int maxWorkingHrs, int empRatePerHr)        {
+            company = comp;
+            this.maxWorkingDays = maxWorkingDays;
+            this.maxWorkingHrs = maxWorkingHrs;
+            this.empRatePerHr = empRatePerHr;
+           
+
         }
-        
-        public static void CalculateEmpWage(string company,int maxWorkingDays, int maxWorkingHrs, int empRatePerHr)
+            public void CalculateEmpWage()
         {
-            //UC-7 
+            //UC-9 
             const int FULL_TIME = 1;
             const int PART_TIME = 2;
             int empHrs = 0, empWage = 0, totalEmpwage = 0, day = 1, totalHrs = 0;
@@ -46,16 +49,28 @@ namespace Empwageuc1
 
                 }
 
-                empWage = empHrs * empRatePerHr; ;
+                empWage = empHrs * empRatePerHr;
                 totalHrs += empHrs;
                // Console.WriteLine("Employee Wage on Day{0} and Hrs {1} is {2}", day, totalHrs, empWage);
                 //totalEmpwage = totalEmpwage + empWage;
-                totalEmpwage += empWage;
+                totalEmpwage += empWage; 
                 day++;
-                
+
 
             }
             Console.WriteLine("\nTotal Empwage of {0} is {1}",company,totalEmpwage);
+        }
+        static void Main(string[] args)
+        {
+            Program Delloite = new Program("Delloite", 20, 70, 40);
+            Delloite.CalculateEmpWage();
+            Program Microsoft = new Program("Microsoft", 18, 60, 90);
+            Microsoft.CalculateEmpWage();
+            Program Infosys = new Program("Infosys", 15, 55, 100);
+            Infosys.CalculateEmpWage();
+            Console.ReadLine();
+
+
         }
     }
 }
